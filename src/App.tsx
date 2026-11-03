@@ -1,3 +1,4 @@
+import { InfoModal } from './components/InfoModal';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { Volume2, VolumeX, Tv, Pause, Play, Sparkles, Trophy, RotateCcw } from 'lucide-react';
 import { ArcadeCanvas } from './components/ArcadeCanvas';
@@ -12,6 +13,7 @@ import {
 import { soundEngine } from './audio/soundEngine';
 
 export function App() {
+  const [showInfo, setShowInfo] = useState(false);
   const [gameState, setGameState] = useState<GameState>('TITLE');
   const [gameMode, setGameMode] = useState<GameMode>('vertical');
   const [costume, setCostume] = useState<CostumeId>('pumpkin_witch');
@@ -377,7 +379,7 @@ export function App() {
               OVERLAY 1: TITLE SCREEN MODAL (Floating over Live Demo)
           ========================================================= */}
           {gameState === 'TITLE' && (
-            <div className="absolute inset-0 z-40 flex items-center justify-center p-3 bg-[#070510]/65 backdrop-blur-[1px]">
+            <div className="absolute inset-0 z-[100] flex items-center justify-center p-3 bg-[#070510]/65 backdrop-blur-[1px]">
               <div className="w-full max-w-[430px] pixel-box p-3.5 sm:p-4 flex flex-col gap-3 max-h-full overflow-y-auto">
                 {/* Title Header */}
                 <div className="text-center border-b-2 border-[#2A1B4E] pb-2.5">
@@ -535,7 +537,7 @@ export function App() {
               OVERLAY 2: PAUSE MODAL
           ========================================================= */}
           {gameState === 'PAUSED' && (
-            <div className="absolute inset-0 z-40 flex items-center justify-center p-4 bg-[#070510]/75 backdrop-blur-[2px]">
+            <div className="absolute inset-0 z-[100] flex items-center justify-center p-4 bg-[#070510]/75 backdrop-blur-[2px]">
               <div className="w-full max-w-[340px] pixel-box p-5 text-center flex flex-col gap-4">
                 <h2 className="font-arcade text-base text-[#FFD166] text-pixel-shadow">
                   JEU EN PAUSE
@@ -577,7 +579,7 @@ export function App() {
               OVERLAY 3: GAME OVER SUMMARY CARD
           ========================================================= */}
           {gameState === 'GAMEOVER' && (
-            <div className="absolute inset-0 z-40 flex items-center justify-center p-3 bg-[#070510]/80 backdrop-blur-[2px]">
+            <div className="absolute inset-0 z-[100] flex items-center justify-center p-3 bg-[#070510]/80 backdrop-blur-[2px]">
               <div className="w-full max-w-[390px] pixel-box-gold p-4 flex flex-col gap-3.5 text-center">
                 <div>
                   {hud.isNewRecord && (
@@ -778,7 +780,19 @@ export function App() {
           )}
         </footer>
       </div>
-    </div>
+    
+      {/* Bouton Infos technique */}
+      <button
+        onClick={() => setShowInfo(true)}
+        className="fixed top-2.5 right-2.5 z-[100] flex items-center gap-1 rounded-lg border border-slate-700/60 bg-slate-900/80 px-2 py-1 text-xs text-amber-200 shadow-md backdrop-blur hover:bg-slate-800 transition cursor-pointer select-none"
+        title="Comment ce jeu a été fait"
+        aria-label="Infos sur le jeu"
+      >
+        <span>ℹ️</span>
+        <span className="hidden sm:inline">Infos</span>
+      </button>
+      <InfoModal isOpen={showInfo} onClose={() => setShowInfo(false)} />
+</div>
   );
 }
 
