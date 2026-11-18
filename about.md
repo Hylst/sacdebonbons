@@ -16,5 +16,5 @@ Un vertical jumper nerveux en pixel art avec costumes déblocables (fantôme, ci
 - 100% statique, sans serveur ni collecte de donnees
 
 ## Contact
-- Email : geoffroy.streit@gmail.com
+- Email : geoffroy.streit@ik.me
 - Plateforme : https://games.hylst.fr/
