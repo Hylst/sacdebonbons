@@ -9,3 +9,7 @@
 ## Idees futures
 - [ ] Ajout de modes de difficulte supplementaires
 - [ ] Nouveaux defis saisonniers
+
+## Audit du 27/11/2026
+
+- [ ] Corriger le README : pas d'inclinaison, quatre costumes au choix.

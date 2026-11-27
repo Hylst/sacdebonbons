@@ -3,7 +3,7 @@
 **Sac de Bonbons : La Ruée Sucrée** est un vertical jumper rétro developpe par **Geoffroy Streit** (alias **Hylst**).
 
 ## Le jeu
-Un vertical jumper nerveux en pixel art avec costumes déblocables (fantôme, citrouille, sorcière), bonbons dorés et multiplicateurs pour vider le quartier avant les monstres.
+Un vertical jumper nerveux en pixel art avec quatre costumes au choix, bonbons dorés et multiplicateurs pour vider le quartier avant les monstres.
 
 ## Le createur
 - Developpeur d'applications, ancien graphiste et compositeur

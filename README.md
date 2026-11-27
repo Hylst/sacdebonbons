@@ -5,7 +5,7 @@
 Joue en ligne sur : [https://games.hylst.fr/sacdebonbons/](https://games.hylst.fr/sacdebonbons/)
 
 ## Description
-Un vertical jumper nerveux en pixel art avec costumes déblocables (fantôme, citrouille, sorcière), bonbons dorés et multiplicateurs pour vider le quartier avant les monstres.
+Un vertical jumper nerveux en pixel art avec quatre costumes au choix, bonbons dorés et multiplicateurs pour vider le quartier avant les monstres.
 
 ## Controles
 | Contrôle | Action |
